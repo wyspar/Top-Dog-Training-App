@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F1F1F1"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -13,27 +14,68 @@
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/menuButtonLayout2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.713">
 
-        <ImageButton
-            android:id="@+id/clickerButton"
-            android:layout_width="85sp"
-            android:layout_height="85sp"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="35dp"
-            android:layout_weight="0"
-            app:srcCompat="@android:drawable/btn_star" />
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <ImageButton
+                android:id="@+id/clickerButton"
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="35dp"
+                android:layout_weight="0"
+                android:background="#00FFFFFF"
+                android:scaleType="fitStart"
+                app:srcCompat="@mipmap/clicker"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="#0000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Clicker" />
+        </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/guideButton"
-            android:layout_width="85sp"
-            android:layout_height="85sp"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="35dp"
-            android:layout_weight="0"
-            app:srcCompat="@android:drawable/btn_star" />
+
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <ImageButton
+                android:id="@+id/guideButton"
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="35dp"
+                android:layout_weight="0"
+                android:background="#00FFFFFF"
+                android:scaleType="fitStart"
+                app:srcCompat="@mipmap/guide"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="#0000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Guide" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -43,36 +85,77 @@
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75">
 
-        <ImageButton
-            android:id="@+id/mapButton"
-            android:layout_width="85sp"
-            android:layout_height="85sp"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="35dp"
-            android:layout_weight="0"
-            app:srcCompat="@android:drawable/btn_star" />
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <ImageButton
+                android:id="@+id/mapButton"
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="35dp"
+                android:layout_weight="0"
+                android:background="#00FFFFFF"
+                android:scaleType="fitStart"
+                app:srcCompat="@mipmap/map"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="#0000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Maps" />
+        </LinearLayout>
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <ImageButton
+                android:id="@+id/communityButton"
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="35dp"
+                android:layout_weight="0"
+                android:background="#00FFFFFF"
+                android:scaleType="fitStart"
+                app:srcCompat="@mipmap/community"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="#0000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="Community" />
+        </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/communityButton"
-            android:layout_width="85sp"
-            android:layout_height="85sp"
-            android:layout_marginHorizontal="35dp"
-            android:layout_gravity="center"
-            android:layout_weight="0"
-            app:srcCompat="@android:drawable/btn_star" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/apptitlename"
+        android:id="@+id/activityTitleName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
